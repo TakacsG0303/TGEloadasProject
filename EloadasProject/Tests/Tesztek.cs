@@ -35,7 +35,7 @@ namespace EloadasProject.Tests
             [TestCase]
             public void EloadasNincsTele()
             {
-                Assert.IsFalse(e.Teli, "Üres előadás tele van!");
+                Assert.IsFalse(e.Teli(), "Üres előadás tele van!");
             }
 
             [TestCase]
@@ -48,7 +48,7 @@ namespace EloadasProject.Tests
                         e.Lefoglal();
                     }
                 }
-                Assert.IsTrue(e.Teli, "Teli előadás mégsincs tele!");
+                Assert.IsTrue(e.Teli(), "Teli előadás mégsincs tele!");
             }
 
             [TestCase]
@@ -63,7 +63,7 @@ namespace EloadasProject.Tests
                 }
                 bool sikerult = e.Lefoglal();
                 Assert.AreEqual(0, e.SzabadHelyek);
-                Assert.IsTrue(e.Teli);
+                Assert.IsTrue(e.Teli());
                 Assert.IsFalse(sikerult);
             }
 
